@@ -3,15 +3,14 @@ import instaloader
 
 def get_profile_pic(username):
 	parser = instaloader.Instaloader()
-	os.chdir(os.path.join(os.path.expanduser('~'), 'Downloads'))
 
-	if os.path.isdir("Instagram Downloads"):
-		os.chdir("Instagram Downloads")
+	if os.path.isdir("Instagram_Downloads"):
+		os.chdir("Instagram_Downloads")
 		return parser.download_prfile(username, profile_pic_only=True)
 
 	else:
-		os.mkdir("Instagram Downloads")
-		os.chdir("Instagram Downloads")
+		os.mkdir("Instagram_Downloads")
+		os.chdir("Instagram_Downloads")
 
 		return parser.download_profile(username, profile_pic_only=True)
 
